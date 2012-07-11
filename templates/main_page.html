@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+ {% block title %}Main Page{% endblock %}
+
+{% block content %}
+<div id="raid_content">
+    <h2>Please Enter your info</h2>
+    
+    <form id="raid_form" action="" method="post">
+    <fieldset>
+        <p>
+        {{ form.num_disks.label }}
+        {{ form.num_disks(placeholder="number") }}
+        {% if form.num_disks.errors %}
+        <div id="errors">
+            {% for error in form.num_disks.errors %}
+                <b>{{ error }}</b>
+            {% endfor %}
+        </div>
+        {% endif %}
+        </p>
+
+        <p>
+        <label for="sod">{{ form.sod.label }}</label>
+        {{ form.sod(placeholder="GB") }}
+        {% if form.sod.errors %}
+        <div id="errors">
+            {% for error in form.sod.errors %}
+                <b>{{ error }}</b>
+            {% endfor %}
+        </div>
+        {% endif %}
+        </p>
+
+        {% for subfield in form.raid_type %}
+        <p>
+        <label>{{ subfield.label }}</label>
+        {{ subfield }}
+        {% endfor %}
+        {% if form.raid_type.errors %}
+        <div id="errors">
+            {% for error in form.raid_type.errors %}
+                <b>{{ error }}</b>
+            {% endfor %}
+        </div>
+        {% endif %}
+        </p>
+
+        <p>
+        <button id="raid_submit" type="submit">Find out the size of my Array</button>
+        </p>
+    </fieldset>
+    </form>
+</div>
+
+<div id="raid_intro">
+    <h2>Figure out the size of your chosen RAID array fast!</h2>
+    <p><b>Mirroring</b>, <b>Striping</b> and <b>Parity Partitions</b>!? Cut through the confusion and figure out the size of your array.</p>
+
+</div>
+
+{% if array_size %}
+<div id="raid_result">
+    <h2>Your array:</h2>
+    <p><b>Array Size</b> = {{ array_size|round(2, 'ceil') }} GB</p>
+    <p><b>Actual Disk Space</b> = {{ ads|round(2, 'ceil') }} GB</p>
+</div>
+{% endif %}
+{% endblock %}

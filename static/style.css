@@ -1,0 +1,203 @@
+body {
+    /*background-image: url('bg.png');
+    background-repeat: repeat-x;*/
+    font-family: Helvetica,Arial,sans-serif; 
+
+}
+
+#menu {
+    width: 900px;
+        margin: 0 auto;
+} 
+#menu div {
+    height: 60px;
+}
+
+#menutop {
+    text-align: left;
+    float: left;
+    width: 500px;
+}
+
+#menutop ul {
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+#menutop li {
+   display: inline;
+   padding: 10px;
+}
+
+#menutop a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#menutop a:hover {
+    color: #3986a6;
+}
+
+#header {
+    float: left;
+    width: 300px;
+    padding: 0px;
+    padding-left: 15px;
+    text-align: left;
+}
+
+#header h1 {
+    font-size: 50px;
+    margin-top: 0px;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+#header a:hover {
+    color: #3986a6;
+}
+
+#clear {
+    overflow: none;
+    clear: both;
+}
+
+#content {
+    width: 900px;
+    height: 400px;
+    margin-top: 10px;
+    margin: 0 auto;
+}
+
+#raid_content form, fieldset, label { 
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#raid_content {
+    float: left;
+}
+
+#raid_content label {
+    float: left;
+    width: 150px;
+    text-align: right;
+    margin-right: 15px;
+}
+
+#raid_content input {
+    width: 50px;
+}
+
+#raid_content fieldset {
+    padding: 20px;
+}
+
+#raid_content h2{
+    margin-bottom: 0px;
+    padding-left: 10px
+}
+
+#raid_content textarea:focus, input:focus {
+    border: 1px solid #3986a6;
+}
+
+#raid_content button {
+    background-color: #3986a6;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: rgba(0, 0, 0.3) 0px 0px 5px 0px;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 17px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 17px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: #3986a6 0px 1px 0px
+}
+
+#raid_content button:hover {
+    background-color: #1E7396;
+}
+
+#raid_intro {
+    float: right;
+    width: 400px;
+    text-align: center;
+    margin-right: 60px;
+    margin-top: 50px;
+}
+
+#raid_intro h2 {
+    color: #333333;
+}
+
+#raid_intro p {
+    color: #999999;
+}
+
+#raid_result {
+    background-color: #F6F6EF;
+    float: right;
+    width: 400px;
+    text-align: left;
+    margin-right: 60px;
+    margin-top: 50px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    padding-left: 10px;
+}
+
+#raid_result h2 {
+    margin: 0;
+    padding: 0;
+    color: ;
+}
+
+#raid_result p {
+    color: #3986a6;
+}
+
+#errors {
+    font-size: 10px;
+    color: #C55A5A;
+    text-align: right;
+    padding-right: 60px;
+}
+
+#about {
+    background-color: #F6F6EF;
+    margin: 0 auto;
+    text-align: left;
+    width: 800px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    padding-left: 10px;
+
+}
+
+#footer {
+    width: 800px
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    font-color: #E3E3E5;
+}
+

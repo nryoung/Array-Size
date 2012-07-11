@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <title>ArraySize: {% block title %}{% endblock %}</title>
+</head>
+
+<body>
+<div id="menu">
+    <div id="menutop">
+        <ul>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+    <div id="header">
+        <h1><a href="/">ArraySize</a></h1>
+    </div>
+</div>
+<div id="clear"></div>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+<div id="clear"></div>
+
+<div id="about">
+    <h3>What is this?</h3>
+    <p>One day at work I realized that I wasn't exactly sure how to calculate RAID array sizes. I figured what better way to learn then to create this.</p>
+
+    <h3>Why isn't my RAID version listed?</h3>
+    <p>I have listed all of the major versions that are currently in use. I do have plans in the future to implement more obscure versions.</p>
+
+    <h3>One of your calculations is wrong, how do I let you know?</h3>
+    <p>Shoot me an <a href="mailto:nryoung@gmail.com">email</a> and I will take a look at it.</p>
+
+    <h3>What if I have a suggestion or an idea?</h3>
+    <p>Feel free to <a href="mailto:nryoung@gmail.com">email</a> me.</p>
+
+
+    <h3>What was used to build this site?</h3>
+    <p>Below is a list of technologies that I learned how to use in creating this website.</p>
+    <ul>
+        <li>Python</li>
+        <li>Flask</li>
+        <li>jQuery</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+    </ul>
+
+    <h3>How was this website created?</h3>
+    <p>Why don't you take a look for yourself? <a href="https://github.com/nryoung/Array-Size">Fork me on Github</a></p>
+</div>
+
+<div id="clear"></div>
+<div id="footer">
+    <p>A personal project by <a href="#">Nic Young</a></p>
+</div>
+
+<script type="text/javascript">
+//Initially hides the about div on page load
+$("#about").hide();
+</script>
+
+<script type="text/javascript">
+//On click this toggles the about div to show
+//It is set to display: none since default is display: block
+$("#menutop a").click(function () {
+    $('#about').slideToggle(function() {
+        $('html, body').animate({
+            scrollTop: $('#about').offset().top
+        }, 1000);
+    });
+});
+</script>
+
+<script type="text/javascript">
+$(function(){
+    $('#raid_result').hide().fadeIn('slow');
+});
+</script>
+</body>
+
+</html>
+

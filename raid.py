@@ -7,8 +7,8 @@ class RaidForm(Form):
     """
     Form class that represents main form in the arraysize app.
     """
-    num_disks = DecimalField(u'Number of Disks:', [validators.Required()], places=2)
-    sod = DecimalField(u'Size of Disks:', [validators.Required()], places=2)
+    num_disks = DecimalField(u'Number of Disks:', [validators.Required(), validators.NumberRange(min=1)], places=2)
+    sod = DecimalField(u'Size of Disks:', [validators.Required(), validators.NumberRange(min=1)], places=2)
     raid_type = RadioField(u'Raid Type', choices=[('1', 'RAID 0:'), ('2', 'RAID 1:'), ('3', 'RAID 10:'), ('4', 'RAID 5:'), ('5', 'RAID 6:')])
 
 def calc_array_size(num_disks, sod, raid_type):
@@ -31,7 +31,7 @@ def calc_array_size(num_disks, sod, raid_type):
     return { 'array_size' : array_size, 'ads' : ads }
 
 @app.route('/', methods=['GET', 'POST'])
-def hello():
+def raid():
     """
     Main function in the ArraySize app.
 

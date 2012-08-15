@@ -1,4 +1,4 @@
-# Array Size v 1.0 #
+# Array Size #
 
 Array Size is a Flask application to calculate RAID array sizes.
 
@@ -10,9 +10,22 @@ Array Size is a Flask application to calculate RAID array sizes.
 - HTML5
 - CSS3
 
-## Website ##
+## Requirements: ##
+If you are using pip and virtualenv (which you should be) you can simply do:
+
+```python
+pip install -r requirments.txt
+```
+## Tests: ##
+You can run the unit test simply by doing:
+
+```python
+python raid_tests.py
+```
+
+## Website: ##
 [Array Size Website](http://www.arraysize.com)
 
 ## Credits: ##
 
-Personal project by [Nic Young](https://github.com/nryoung)
+Personal project by [Nic Young](http://nryoung.org)

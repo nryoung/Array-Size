@@ -1,6 +1,6 @@
 Flask==0.8
 Flask-Testing==0.4
-Jinja2==2.6
+Jinja2==2.11.3
 WTForms==1.0.1
 Werkzeug==0.8.3
 argparse==1.2.1
